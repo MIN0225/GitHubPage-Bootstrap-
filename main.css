@@ -1,0 +1,227 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+header {
+  /* background-color: #040d22; */
+  position: relative;
+}
+/* header .container {
+  display: flex; /* 수평정렬
+  align-items: center; 수직정렬 가운데 
+  padding-top: 20px; /* 내부여백 위쪽 
+  padding-bottom: 20px; /* 내부여백 아래
+} */
+header .forms input.form-control {
+  color: white;
+  background-color: rgba(255, 255, 255, .15);
+  border-color: rgba(255, 255, 255, .3);
+}
+header .forms input.form-control::placeholder {
+  /*: 콜론 하나는 가상 클래스 선택자
+  :: 콜론 두개는 가상 요소 선택자*/
+  color: rgba(255, 255, 255, .6);
+}
+header [data-bs-toggle="offcanvas"] {
+  display: none;
+}
+header .offcanvas .list-group-item {
+  padding: 16px;
+}
+header .offcanvas .list-group-item a {
+  color: black;
+  text-decoration: none;
+}
+header .offcanvas .list-group-item a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 992px) { /* 가로너비 992px 이하일 때 */
+  header .logo {
+    flex-grow: 1; /* logo가 차지하는 영역이 최대한 늘어나면서 오른쪽으로 밀어냄 */
+  }
+  header .nav,
+  header .forms input.form-control,
+  header .forms .btn-link {
+    display: none; /* 숨김 */
+  }
+  header [data-bs-toggle="offcanvas"] {
+    display: block; /* 보여주기 */
+  }
+}
+
+
+section.hero {
+  background-color: #040d22;
+  position: relative;
+  overflow: hidden;
+}
+section.hero .container{
+  padding-top: 160px;
+  padding-bottom: 160px;
+  position: relative;
+}
+section.hero .headline h1 {
+  font-size: 68px;
+  font-weight: 700;
+  letter-spacing: -2px; /* 간격을 좁히기 위함*/
+}
+section.hero .headline p {
+  font-size: 26px;
+}
+section.hero img.globe {
+  width: 900px;
+  position: absolute;
+  top: -5%;
+  left: 46%;
+}
+section.hero img.glow {
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.hero .curve {
+  position: absolute; /* position 설정 안해주면 globe 이미지가 먼저나옴*/
+  bottom: -1px;
+  left: 0;
+}
+
+
+section.youtube {
+  
+}
+section.youtube .container { /* 부모요소를 위에 작성*/
+  padding-top: 90px;
+  padding-bottom: 70px;
+  position: relative; /* 배치의 기준*/
+}
+section.youtube img.astronaut {
+  width: 480px;
+  position: absolute;
+  top: -420px;
+  right: 0; /* 숫자 0은 단위를 붙이지 않는다*/
+
+}
+section.youtube .ratio {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  section.youtube img.astronaut {
+    display: none; /* 우주비행사 일러스트 사라지게 함 */
+  }
+}
+
+section.features {
+
+}
+section.features .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+section.features .card {
+  color: #627597;
+  border: none;
+}
+section.features .card img {
+  padding: 30px 60px; /* 위 아래 | 좌 우*/
+}
+
+@media (max-width: 576px) {
+  section.features .card img {
+    padding: 20px 30px;
+  }
+}
+
+section.map {
+
+}
+section.map .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #627597;
+}
+section.map h1 {
+  font-size: 44px;
+  font-weight: 700;
+}
+section.map p {
+  font-size: 24px;
+}
+#map { /* id선택자는 고유한 값이어야함*/
+  background-color: black;
+  height: 500px;
+  border: 1px solid rgba(0, 0, 0,.2);
+  border-radius: 10px;
+  z-index: 1; /* z축의 수치를 0보다 크게 설정함으로써 더 위헤 쌓이게 함 */
+}
+
+footer {
+  background-color: #040d22;
+  position: relative;
+  margin-top: 20%;
+}
+footer .curve {
+  position: absolute; /* 부모요소 footer에 position: relative; 가 있어야 함 */
+  top: -5px;
+  left: 0;
+  transform: scale(1,-1); /*(x,y) 상하 반전*/
+}
+footer .container {
+
+}
+footer img.illustration {
+  width: 100%; /* 부모요소인 container크기 만큼이 100% */
+  margin-top: -33%; /* 이미지가 위로 올라감*/
+  margin-bottom: 50px;
+  transform: scale(-1,1); /*(x,y) 좌우 반전*/
+}
+footer img.logo {
+  opacity: .4;
+}
+footer h5 {
+  font-weight: 700;
+  color: rgba(255, 255, 255, .4);
+  margin-bottom: 20px;
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li a {
+  color: rgba(255, 255, 255, .4);
+  text-decoration: none;
+  transition: .3s; /* hover로 자연스럽게 전환 */
+}
+footer ul li a:hover {
+  color: white;
+}
+footer .site-links {
+  margin: 0; /* margin 초기화 */
+  margin-top: 60px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, .05);
+  display: flex; 
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer .site-links li {
+  color: rgba(255, 255, 255, .4);
+  margin: 0; /* margin 초기화 */
+  margin-right: 20px;
+}
+footer .site-links li:last-child { /* What is Git? margin 초기화 */
+  margin-right: 0;
+}
+@media (max-width: 992px) {
+  footer {
+    text-align: center;
+  }
+  footer img.logo {
+    margin-bottom: 50px;
+  }
+}
